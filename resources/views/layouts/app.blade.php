@@ -27,35 +27,6 @@
 
 <body class="bg-white font-family-karla">
 
-    <!-- Top Bar Nav -->
-    <nav class="py-4 w-full bg-blue-800 shadow">
-        <div class="container flex flex-wrap justify-between items-center mx-auto w-full">
-
-            <nav>
-                <ul class="flex justify-between items-center text-sm font-bold text-white no-underline uppercase">
-                    <li><a class="px-4 hover:text-gray-200 hover:underline" href="#">Shop</a></li>
-                    <li><a class="px-4 hover:text-gray-200 hover:underline" href="#">About</a></li>
-                </ul>
-            </nav>
-
-            <div class="flex items-center pr-6 text-lg text-white no-underline">
-                <a class="" href="#">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a class="pl-6" href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a class="pl-6" href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a class="pl-6" href="#">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-
-    </nav>
-
     <!-- Text Header -->
     <header class="container mx-auto w-full">
         <div class="flex flex-col items-center py-12">

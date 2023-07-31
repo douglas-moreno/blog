@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
@@ -22,6 +23,10 @@ class Post extends Model
         'user_id'
     ];
 
+    protected $casts = [
+        'published_at' => 'datetime',
+    ];
+
     public function user(): BelongsTo
     {
         return $this->BelongsTo(User::class);
@@ -30,5 +35,24 @@ class Post extends Model
     public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function shortBody(): string
+    {
+        return Str::words(strip_tags($this->body), 15);
+    }
+
+    public function getDate(): string
+    {
+        return $this->published_at->format('F jS Y');
+    }
+
+    public function getThumbnail()
+    {
+        if (str_starts_with($this->thumbnail, 'http')) {
+            return $this->thumbnail;
+        }
+
+        return '/storage/' . $this->thumbnail;
     }
 }
