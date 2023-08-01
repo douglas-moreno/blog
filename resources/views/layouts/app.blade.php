@@ -34,7 +34,7 @@
                 Doug's Blog
             </a>
             <p class="text-lg text-gray-600">
-                Lorem Ipsum Dolor Sit Amet
+                {{ App\Models\TextWidget::getTitle('header') }}
             </p>
         </div>
     </header>
@@ -65,25 +65,6 @@
     <div class="container flex flex-wrap py-6 mx-auto">
 
         {{ $slot }}
-
-        <!-- Sidebar Section -->
-        <aside class="flex flex-col items-center px-3 w-full md:w-1/3">
-
-            <div class="flex flex-col p-6 my-4 w-full bg-white shadow">
-                <p class="pb-5 text-xl font-semibold">About Us</p>
-                <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est eu odio
-                    sagittis tristique. Vestibulum ut finibus leo. In hac habitasse platea dictumst.</p>
-                <a href="#"
-                    class="flex justify-center items-center px-2 py-3 mt-4 w-full text-sm font-bold text-white uppercase bg-blue-800 rounded hover:bg-blue-700">
-                    Get to know us
-                </a>
-            </div>
-
-            <div class="flex flex-col p-6 my-4 w-full bg-white shadow">
-
-            </div>
-
-        </aside>
 
     </div>
 
