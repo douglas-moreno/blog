@@ -31,7 +31,7 @@
     <header class="container mx-auto w-full">
         <div class="flex flex-col items-center py-12">
             <a class="text-5xl font-bold text-gray-800 uppercase hover:text-gray-700" href="#">
-                Minimal Blog
+                Doug's Blog
             </a>
             <p class="text-lg text-gray-600">
                 Lorem Ipsum Dolor Sit Amet
@@ -80,22 +80,7 @@
             </div>
 
             <div class="flex flex-col p-6 my-4 w-full bg-white shadow">
-                <p class="pb-5 text-xl font-semibold">Instagram</p>
-                <div class="grid grid-cols-3 gap-3">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=2">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=3">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=4">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=5">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=6">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=7">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=8">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=9">
-                </div>
-                <a href="#"
-                    class="flex justify-center items-center px-2 py-3 mt-6 w-full text-sm font-bold text-white uppercase bg-blue-800 rounded hover:bg-blue-700">
-                    <i class="mr-2 fab fa-instagram"></i> Follow @dgrzyb
-                </a>
+
             </div>
 
         </aside>
@@ -103,56 +88,10 @@
     </div>
 
     <footer class="pb-12 w-full bg-white border-t">
-        <div class="flex relative invisible items-center w-full md:visible md:pb-12" x-data="getCarouselData()">
-            <button
-                class="absolute ml-12 w-16 h-16 text-2xl font-bold text-white bg-blue-800 rounded-full hover:bg-blue-700 hover:shadow"
-                x-on:click="decrement()">
-                &#8592;
-            </button>
-            <template x-for="image in images.slice(currentIndex, currentIndex + 6)" :key="images.indexOf(image)">
-                <img class="w-1/6 hover:opacity-75" :src="image">
-            </template>
-            <button
-                class="absolute right-0 mr-12 w-16 h-16 text-2xl font-bold text-white bg-blue-800 rounded-full hover:bg-blue-700 hover:shadow"
-                x-on:click="increment()">
-                &#8594;
-            </button>
-        </div>
         <div class="container flex flex-col items-center mx-auto w-full">
-            <div class="flex flex-col py-6 text-center md:flex-row md:text-left md:justify-between">
-                <a href="#" class="px-3 uppercase">About Us</a>
-                <a href="#" class="px-3 uppercase">Privacy Policy</a>
-                <a href="#" class="px-3 uppercase">Terms & Conditions</a>
-                <a href="#" class="px-3 uppercase">Contact Us</a>
-            </div>
-            <div class="pb-6 uppercase">&copy; myblog.com</div>
+            <div class="pb-6 uppercase">&copy; dougsblog.com</div>
         </div>
     </footer>
-
-    <script>
-        function getCarouselData() {
-            return {
-                currentIndex: 0,
-                images: [
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=1',
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=2',
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=3',
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=4',
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=5',
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=6',
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=7',
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=8',
-                    'https://source.unsplash.com/collection/1346951/800x800?sig=9',
-                ],
-                increment() {
-                    this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex + 1;
-                },
-                decrement() {
-                    this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex - 1;
-                },
-            }
-        }
-    </script>
 
 </body>
 
