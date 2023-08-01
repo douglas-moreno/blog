@@ -43,7 +43,7 @@
     <nav class="py-4 w-full bg-gray-100 border-t border-b" x-data="{ open: false }">
         <div class="block sm:hidden">
             <a href="#"
-                class="block flex justify-center items-center text-base font-bold text-center uppercase md:hidden"
+                class="flex justify-center items-center text-base font-bold text-center uppercase md:hidden"
                 @click="open = !open">
                 Topics <i :class="open ? 'fa-chevron-down' : 'fa-chevron-up'" class="ml-2 fas"></i>
             </a>
