@@ -5,7 +5,8 @@
 
         @foreach ($categories as $category)
             <a href="{{ route('by-category', $category) }}"
-                class="block px-3 py-2 rounded text-semibold hover:text-white hover:bg-blue-600">
+                class="block px-3 py-2 rounded text-semibold hover:text-white hover:bg-blue-600
+                {{ request('category')?->slug === $category->slug ? 'bg-blue-600 text-white' : '' }}">
                 {{ $category->title }} ({{ $category->total }})
             </a>
         @endforeach
@@ -18,7 +19,7 @@
         <p class="pb-2">
             {!! \App\Models\TextWidget::getContent('about-us-sidebar') !!}
         </p>
-        <a href="#"
+        <a href="{{ route('about-us') }}"
             class="flex justify-center items-center px-2 py-3 mt-4 w-full text-sm font-bold text-white uppercase bg-blue-800 rounded hover:bg-blue-700">
             Get to know us
         </a>

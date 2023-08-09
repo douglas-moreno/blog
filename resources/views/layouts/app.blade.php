@@ -58,7 +58,8 @@
                         class="px-4 py-2 mx-2 rounded hover:text-white hover:bg-blue-600">{{ $category->title }}</a>
                 @endforeach
 
-                <a href="#" class="px-4 py-2 mx-2 rounded hover:text-white hover:bg-blue-600">About Us</a>
+                <a href="{{ route('about-us') }}"
+                    class="px-4 py-2 mx-2 rounded hover:text-white hover:bg-blue-600">About Us</a>
             </div>
         </div>
     </nav>
