@@ -41,14 +41,16 @@
                 @endif
             </div>
             <div class="w-1/2">
-                <a href="{{ route('show', $next) }}"
-                    class="block p-6 w-full text-right bg-white shadow hover:shadow-md">
-                    <p class="flex justify-end items-center text-lg font-bold text-blue-800">Next <i
-                            class="pl-1 fas fa-arrow-right"></i></p>
-                    <p class="pt-2">
-                        {{ \Illuminate\Support\Str::words($next->title, 5) }}
-                    </p>
-                </a>
+                @if ($next)
+                    <a href="{{ route('show', $next) }}"
+                        class="block p-6 w-full text-right bg-white shadow hover:shadow-md">
+                        <p class="flex justify-end items-center text-lg font-bold text-blue-800">Next <i
+                                class="pl-1 fas fa-arrow-right"></i></p>
+                        <p class="pt-2">
+                            {{ \Illuminate\Support\Str::words($next->title, 5) }}
+                        </p>
+                    </a>
+                @endif
             </div>
         </div>
     </section>

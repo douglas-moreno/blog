@@ -4,7 +4,8 @@
         <h3 class="mb-3 text-xl font-semibold"> All Categories</h3>
 
         @foreach ($categories as $category)
-            <a href="#" class="block px-3 py-2 rounded text-semibold hover:text-white hover:bg-blue-600">
+            <a href="{{ route('by-category', $category) }}"
+                class="block px-3 py-2 rounded text-semibold hover:text-white hover:bg-blue-600">
                 {{ $category->title }} ({{ $category->total }})
             </a>
         @endforeach
